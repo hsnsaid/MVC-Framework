@@ -1,1 +1,6 @@
+# Ignore the .env file
 .env
+
+# Ignore Composer's dependencies and lock file
+composer.json
+composer.lock
