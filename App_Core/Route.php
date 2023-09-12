@@ -3,7 +3,7 @@ declare(strict_types=1);
 namespace App_Core;
 class Route{
     private array $route=[];
-    public function register(string $url,string $method,array $action):self{
+    private function register(string $url,string $method,array $action):self{
         $this->route[$url][$method]=$action;
         return $this;   
     }

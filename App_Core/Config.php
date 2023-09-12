@@ -1,5 +1,4 @@
 <?php
-declare(strict_types=1);
 namespace App_Core;
 class Config{
     private array $config;
