@@ -52,7 +52,7 @@ class Route{
     }
     private function abort(int $code=404){
         http_response_code($code);
-        require __DIR__ . "/../UIs/404.html";
+        require __DIR__ . "/../Views/404.html";
         die();
     }
 }
