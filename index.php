@@ -8,11 +8,19 @@ use App_Core\Config;
 use Controller\Controller;
 
 $route=new Route();
-$route->get("/project/MVC_Frameworks/home.php",[Controller::class,"index","Home"]);
-$route->get("/project/MVC_Frameworks/",[Controller::class,"index","Home"]);
-$route->post("/project/MVC_Frameworks/form.php",[Controller::class,"index","Home"]);
-$route->delete("/project/MVC_Frameworks/profile.php",[Controller::class,"index"]);
-$route->get("/project/MVC_Frameworks/form.php",[Controller::class,"index","Home"]);
+$route->get("/project/note_app/",[Controller::class,"file","signin"]);
+$route->get("/project/note_app/login.html",[Controller::class,"file","login"]);
+$route->get("/project/note_app/signin.html",[Controller::class,"file","signin"]);
+$route->get("/project/note_app/add_note.html",[Controller::class,"file","add_note"]);
+$route->get("/project/note_app/Home.html",[Controller::class,"show","Home"]);
+$route->get("/project/note_app/logout.html",[Controller::class,"logout"]);
+
+$route->post("/project/note_app/login.html",[Controller::class,"check","Home"]);
+$route->post("/project/note_app/",[Controller::class,"create","Home"]);
+$route->post("/project/note_app/signin.html",[Controller::class,"create","Home"]);
+$route->post("/project/note_app/add_note.html",[Controller::class,"add","add_note"]);
+$route->post("/project/note_app/upadate.html",[Controller::class,"search_post","search"]);
+$route->post("/project/note_app/delete.html",[Controller::class,"search_post","search"]);
 
 (new App($route,
 ["uri" =>$_SERVER["REQUEST_URI"] ,"method"=> $_SERVER["REQUEST_METHOD"]]
