@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 namespace Controller;
+use App_core\SessioManger;
 class Controller{
     public function file($file){
         $view = new \Views\Views($file);
